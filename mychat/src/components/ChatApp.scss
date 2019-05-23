@@ -14,6 +14,7 @@
   .conversations {
     flex-grow: 1;
     width: 400px;
+    min-width: 270px;
     overflow-y: scroll;
 
     .conversations-item-container {
