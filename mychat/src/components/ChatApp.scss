@@ -1,0 +1,115 @@
+@import '../styles/main';
+
+.chat-app {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 15px;
+
+  display: flex;
+
+  border: 2px solid $blue02;
+  border-radius: 4px;
+
+
+  .conversations {
+    flex-grow: 1;
+    width: 400px;
+    overflow-y: scroll;
+
+    .conversations-item-container {
+      padding: 0;
+      margin: 0;
+
+      overflow-y: scroll;
+
+      .add-conversation {
+        list-style: none;
+        width: calc(100% - 20px);
+        height: 30px;
+        padding: 10px;
+
+        background-color: $blue04;
+        border-bottom: 2px solid $blue05;
+
+        .new-message-input, .new-message-button {
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .conversations-item {
+        list-style: none;
+
+        width: calc(100% - 20px);
+        height: 30px;
+        padding: 10px;
+
+        background-color: $blue03;
+        border-bottom: 2px solid $blue01;
+
+        &-text {
+          &.active {
+            font-weight: bold;
+          }
+        }
+
+        &.active {
+          background-color: $blue02;
+        }
+      }
+    }
+  }
+
+  .active-conversation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    background-color: $white02;
+
+    .conversation-container {
+      flex-grow: 1;
+      overflow-y: scroll;
+    }
+
+    .compose-message-container {
+      height: 40px;
+      min-height: 40px;
+      display: flex;
+
+      .compose-message-input {
+        height: calc(100% - 5px);
+        flex-grow: 1;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      .send-message {
+        height: 100%;
+        width: 120px;
+        background-color: $blue01;
+        color: $white02;
+        font-weight: bold;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .active-conversation-list {
+      padding: 5px;
+      margin: 5px;
+
+      .message-text {
+        list-style: none;
+
+        .message-sender {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

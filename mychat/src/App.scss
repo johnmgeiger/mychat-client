@@ -1,0 +1,65 @@
+@import 'styles/main';
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  background-color: $white02;
+  font-family: sans-serif;
+
+  .app-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+
+    background-color: $blue05;
+    border-radius: 4px;
+  }
+
+  .app-header {
+    size: 1.5em;
+    color: $blue01;
+  }
+
+  .username-container {
+    font-size: 1.15em;
+
+    $usernameHeight: 30px;
+    $usernameBorderRadius: 3px;
+    $usernameMarginLeft: 8px;
+
+    .username-sub-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .username-input {
+      height: $usernameHeight;
+      width: 200px;
+      margin-left: $usernameMarginLeft;
+
+      border: solid 0;
+      border-radius: $usernameBorderRadius;
+    }
+    .username-button {
+      height: $usernameHeight;
+      margin-left: $usernameMarginLeft;
+
+      border-radius: $usernameBorderRadius;
+
+      color: $white02;
+      background-color: $blue01;
+
+      font-size: 1em;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
